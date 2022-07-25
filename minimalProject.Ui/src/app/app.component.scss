@@ -1,0 +1,71 @@
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.main{
+    margin-left: -222px;
+    margin-right: 50px;
+}
+.mainPage{
+    width: 800px;
+    height: 600px;
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+.nameContent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    height: 60px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.emailContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    height: 60px;
+    padding: 10px;
+    margin: 10px;
+    height: 230px;
+}
+
+
+
+.infoContent
+{
+    width: 1000px;
+    height: 600px;
+    border: 1px solid black;
+    padding: 20px;
+    margin-top: 54px;
+}
+
+.datePicker{
+    margin: 40px;
+}
+
+.submit{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    button{
+        width: 100px;
+        height: 60px;
+        border: none;
+        border-radius: 30px;
+        background-color: rgb(236, 91, 91);
+        color: white;
+    }
+}

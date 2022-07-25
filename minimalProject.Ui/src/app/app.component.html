@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="main">
+    <div>
+      <h1>Minimal Project</h1>
+    </div>
+    <div class="mainPage">
+      <div class="nameContent">
+        <div>
+          <span>FirstName: </span>
+          <input type="text" [(ngModel)]="firstName" />
+        </div>
+        <div>
+          <span>LastName: </span>
+          <input type="text" [(ngModel)]="lastName" />
+        </div>
+      </div>
+      <div class="nameContent">
+        <div>
+          <span>BirthDate: </span>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Choose a date</mat-label>
+            <input
+              matInput
+              [matDatepicker]="picker"
+              [(ngModel)]="birthDate"
+              placeholder="Click To Choose Date"
+              class="date"
+            />
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div>
+          <span>Email: </span>
+          <input type="text" [(ngModel)]="email" />
+        </div>
+      </div>
+      <div class="emailContent">
+        <div>
+          <!-- file document -->
+          <div class="text-center">
+            <input
+              class="form-control"
+              type="file"
+              (change)="onChange($event)"
+            />
+
+            <button (click)="onUpload()" class="btn btn-success">Upload</button>
+          </div>
+
+          <div class="container text-center jumbotron" *ngIf="shortLink">
+            <h2>Done!</h2>
+          </div>
+
+          <div class="container" *ngIf="loading">
+            <h3>Loading ...</h3>
+          </div>
+        </div>
+      </div>
+      <div class="submit">
+        <button class="button" (click)="insert()">submit</button>
+      </div>
+    </div>
+    <div></div>
+  </div>
+</div>
