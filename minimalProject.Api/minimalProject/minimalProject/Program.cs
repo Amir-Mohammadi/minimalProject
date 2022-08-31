@@ -16,7 +16,7 @@ builder.Services.AddCors(options => options.AddPolicy(name: "minimalProjectOrigi
     }));
 
 builder.Services.AddDbContext<ApplicationDbContext>(options => 
-    options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
+    options.UseSqlite(builder.Configuration.GetConnectionString("sqlite")));
 
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 builder.Host.ConfigureContainer<ContainerBuilder>(builder =>

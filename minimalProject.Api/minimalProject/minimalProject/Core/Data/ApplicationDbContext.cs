@@ -13,15 +13,11 @@ namespace minimalProject.Core.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
-
-
             var assembly = Assembly.GetExecutingAssembly();
-            var nameSpace = this.GetType().Namespace;
+            modelBuilder.ApplyConfigurationsFromAssembly(assembly);   
 
         }
 
-        public DbSet<User> Users { get; set; }
-        public DbSet<IpDetect> ipDetects { get; set; }
+       
     }
 }
